@@ -5,20 +5,34 @@ export default function getArray(characterObject) {
     return [];
   }
 
-  for (let i = 0; i < special.length; i += 1) {
-    if (!special[i].description) {
-      special[i].description = 'Описание недоступно';
+  special.forEach(function(item) {
+    if (!item.description) {
+      item.description = 'Описание недоступно';
     }
     result.push({
-      id: special[i].id,
-      name: special[i].name,
-      icon: special[i].icon,
-      description: special[i].description,
+      id: item.id,
+      name: item.name,
+      icon: item.icon,
+      description: item.description,
     });
-  }
-
+  
   return result;
-}
+  });
+
+//   for (let i = 0; i < special.length; i += 1) {
+//     if (!special[i].description) {
+//       special[i].description = 'Описание недоступно';
+//     }
+//     result.push({
+//       id: special[i].id,
+//       name: special[i].name,
+//       icon: special[i].icon,
+//       description: special[i].description,
+//     });
+//   }
+
+//   return result;
+// }
 
 const character = {
   name: 'Лучник',
