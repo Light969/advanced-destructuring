@@ -16,7 +16,7 @@ export default function getArray(characterObject) {
       description: item.description,
     });
   
-  return result;
+  // return result;
   });
 
 //   for (let i = 0; i < special.length; i += 1) {
