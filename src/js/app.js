@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 export default function getArray(characterObject) {
   const result = [];
   const { special } = characterObject;
@@ -5,7 +6,7 @@ export default function getArray(characterObject) {
     return [];
   }
 
-  special.forEach(function(item) {
+  special.forEach((item) => {
     if (!item.description) {
       item.description = 'Описание недоступно';
     }
@@ -15,9 +16,9 @@ export default function getArray(characterObject) {
       icon: item.icon,
       description: item.description,
     });
-  
-  // return result;
   });
+  return result;
+}
 
 //   for (let i = 0; i < special.length; i += 1) {
 //     if (!special[i].description) {
